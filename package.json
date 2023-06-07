@@ -1,0 +1,40 @@
+{
+  "name": "reqres",
+  "version": "1.0.0",
+  "description": "mocha chai Reqres example",
+  "main": "index.js",
+  "scripts": {
+    "welcome": "mocha test/api/welcomeTest.js",
+    "test": "mocha",
+    "post register": "mocha test/api/postRegister.js",
+    "post login": "mocha test/api/postLogin.js",
+    "get list users": "mocha test/api/getListUsers.js",
+    "get single user": "mocha test/api/getSingleUser.js",
+    "get list resource": "mocha test/api/getListResource.js",
+    "get single resource": "mocha test/api/getSingleResource.js",
+    "post create": "mocha test/api/postCreate.js",
+    "put update": "mocha test/api/putUpdate.js",
+    "patch update": "mocha test/api/patchUpdate.js",
+    "delete delete": "mocha test/api/deleteDelete.js",
+    "get delayed response": "mocha test/api/getDelayedResponse.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrisqiamiruladieb/Reqres.git"
+  },
+  "author": "adieb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrisqiamiruladieb/Reqres/issues"
+  },
+  "homepage": "https://github.com/mrisqiamiruladieb/Reqres#readme",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3",
+    "supertest": "^6.3.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.1"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-06-07T07:12:26.670Z",
+    "end": "2023-06-07T07:12:27.186Z",
+    "duration": 516,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "93cf6b74-b7f7-4681-bf69-3de5527bc34e",
+      "title": "",
+      "fullFile": "C:\\Users\\ACER\\Documents\\Reqres\\test\\api\\chaiAssertLogin.js",
+      "file": "\\test\\api\\chaiAssertLogin.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1f1e9cf8-14d1-4cbd-ae73-09c21aec1cbb",
+          "title": "Post Request Login",
+          "fullFile": "C:\\Users\\ACER\\Documents\\Reqres\\test\\api\\chaiAssertLogin.js",
+          "file": "\\test\\api\\chaiAssertLogin.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "response status equal to 200",
+              "fullTitle": "Post Request Login response status equal to 200",
+              "timedOut": false,
+              "duration": 490,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Check response status harus sama dengan 200\nexpect((await response).status).to.equal(200)",
+              "err": {},
+              "uuid": "7afdb9e1-77f2-4edf-b1f0-98745f1fc699",
+              "parentUUID": "1f1e9cf8-14d1-4cbd-ae73-09c21aec1cbb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "response body to haveOwnProperty",
+              "fullTitle": "Post Request Login response body to haveOwnProperty",
+              "timedOut": false,
+              "duration": 2,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//Expect dalam body response terdapat value token\nexpect((await response).body).to.haveOwnProperty('token')",
+              "err": {},
+              "uuid": "80832146-fac9-48cb-83f4-59b1d8a66a72",
+              "parentUUID": "1f1e9cf8-14d1-4cbd-ae73-09c21aec1cbb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7afdb9e1-77f2-4edf-b1f0-98745f1fc699",
+            "80832146-fac9-48cb-83f4-59b1d8a66a72"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 492,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
