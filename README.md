@@ -36,4 +36,4 @@ Cara run
 -> Open di browser file mochawesome.html
 -> Nanti muncul reporting testing dalam bentuk html
 
-Buat folder data dan file baru di dalamnya userData.js
+Buat folder data dan file baru di dalamnya userData.js yang berguna untuk pemanggilan data ke file script testing test\api
