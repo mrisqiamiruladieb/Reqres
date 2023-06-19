@@ -2,7 +2,7 @@
 
 Javascript API Automation
 
-Belajar test api secara automate menggunakan javascript
+Belajar test api secara automate menggunakan javascript <br>
 Test dilakukan dengan menggunakan dokumentasi api Reqres.in
 dan dikerjakan dengan mengikuti panduan dari myskill.
 
