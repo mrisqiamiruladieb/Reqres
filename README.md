@@ -1,4 +1,4 @@
-# Reqres <br>
+# Reqres 
 
 Javascript API Automation <br>
 
