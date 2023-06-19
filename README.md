@@ -1,24 +1,24 @@
-# Reqres
+# Reqres <br>
 
-Javascript API Automation
+Javascript API Automation <br>
 
 Belajar test api secara automate menggunakan javascript <br>
-Test dilakukan dengan menggunakan dokumentasi api Reqres.in
-dan dikerjakan dengan mengikuti panduan dari myskill.
+Test dilakukan dengan menggunakan dokumentasi api Reqres.in <br>
+dan dikerjakan dengan mengikuti panduan dari myskill. <br>
 
-Tahap awal
--> Buat repository baru di github
--> Lakukan clone di vs code 
--> Buka foldernya
--> Buka terminal dan run command berikut : (sebelum run command di terminal pastikan telah berada di path direktori folder repository)
-  -> npm init
-    -> description : mocha chai Reqres example
-    -> test command : mocha
-  -> npm --version (Cek versi npm terinstal)
-  -> npm install mocha
-  -> npm install chai
-  -> npm install supertest
-  -> npm install --save-dev @babel/core
+Tahap awal <br>
+-> Buat repository baru di github <br>
+-> Lakukan clone di vs code <br>
+-> Buka foldernya <br>
+-> Buka terminal dan run command berikut : (sebelum run command di terminal pastikan telah berada di path direktori folder repository) <br>
+  -> npm init <br>
+    -> description : mocha chai Reqres example <br>
+    -> test command : mocha <br>
+  -> npm --version (Cek versi npm terinstal) <br>
+  -> npm install mocha <br>
+  -> npm install chai <br>
+  -> npm install supertest <br>
+  -> npm install --save-dev @babel/core <br>
 
 Buat file assert.js untuk pemanggilan dengan tujuan untuk mereturn suatu assert yang diinginkan
 
