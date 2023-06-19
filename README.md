@@ -11,14 +11,14 @@ Tahap awal <br>
 -> Lakukan clone di vs code <br>
 -> Buka foldernya <br>
 -> Buka terminal dan run command berikut : (sebelum run command di terminal pastikan telah berada di path direktori folder repository) <br>
-  -> npm init <br>
-    -> description : mocha chai Reqres example <br>
-    -> test command : mocha <br>
-  -> npm --version (Cek versi npm terinstal) <br>
-  -> npm install mocha <br>
-  -> npm install chai <br>
-  -> npm install supertest <br>
-  -> npm install --save-dev @babel/core <br>
+  &emsp; -> npm init <br>
+    &emsp; &emsp; -> description : mocha chai Reqres example <br>
+    &emsp; &emsp; -> test command : mocha <br>
+  &emsp; -> npm --version (Cek versi npm terinstal) <br>
+  &emsp; -> npm install mocha <br>
+  &emsp; -> npm install chai <br>
+  &emsp; -> npm install supertest <br>
+  &emsp; -> npm install --save-dev @babel/core <br>
 
 Buat file assert.js untuk pemanggilan dengan tujuan untuk mereturn suatu assert yang diinginkan <br>
 
