@@ -19,6 +19,7 @@
   - `npm install supertest` 
   - `npm install --save-dev @babel/core`
   - `npm install mochawesome` ([HTML Report dengan mochawesome](#html-report-dengan-mochawesome))
+  - `npm install ajv` ([Validasi JSON Schema](#validasi-json-schema))
 
 ## Contoh Assert
 - Buat file **assert.js** yang berisi pesan yang ingin diassert. Kemudian, **panggil** untuk mereturn assert tersebut.
@@ -44,6 +45,13 @@
 - Di *direktori akar*, buat file **env.js** untuk mereturn **baseUrl** (*untuk memudahkan/mempersingkat code*) yang dapat dipanggil oleh file test di *test\api*. Contoh *penggunaannya* di test\api\ __postLogin.js__
 - Di *direktori akar*, buat file dengan folder data\ **userData.js** untuk return *data* ke file script di *test\api*. Contoh *penggunaannya* di test\api\ __postLogin.js__
   
+## Validasi JSON Schema
+- ([Referensi](https://medium.com/@AlexanderObregon/json-schema-a-guide-to-validating-your-json-data-9f225b2a17ef)) Pastikan [library AJV](#tahap-awal) sudah terinstal : `npm list` (cek library npm dari proyek saat ini di terminal)
+- Pada *file script*, **import dan setup library AJV**
+- Buat **file/variabel** berisi *JSON Schema Response Body* untuk diverifikasi menggunakan [Helper](https://github.com/mrisqiamiruladieb/REST-Assured-Java-Part-1/blob/master/README.md#helper)
+- Validasi JSON Schema dengan respons bodi JSON dengan kode: `ajv.validate(jsonSchema, responseBodyJson);`
+- [Run](#cara-run-test-di-terminal) *file script*
+
 ## HTML Report dengan mochawesome
 - Pastikan [library mochawesome](#tahap-awal) sudah terinstal : `npm list` (cek library npm dari proyek saat ini di terminal)  
 - Cara **run** di terminal
