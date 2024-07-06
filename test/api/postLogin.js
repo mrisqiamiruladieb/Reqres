@@ -6,14 +6,13 @@ describe('Post Request Login', () => {
     it('Login - Successful', async () => {
         const response = request(baseUrl())
         .post('/login')
-        .send(DATA.CREATE_USER_DATA)
+        .send(DATA.LOGIN_USER_DATA)
 
         // parsing request body
         // console.log("Data email: " + DATA.CREATE_USER_DATA.email)
         
         console.log((await response).status)
         console.log((await response).body)
-        console.log((await response).ur)
     })
 
     it('Login - unsuccessful', async () => {
