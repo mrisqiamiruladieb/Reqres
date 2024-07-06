@@ -1,42 +1,52 @@
 # Reqres 
 
-Javascript API Automation <br>
+*Dokumentasi API :* Reqres.in <br>
 
-Belajar test api secara automate menggunakan javascript <br>
-Test dilakukan dengan menggunakan dokumentasi api Reqres.in <br>
-dan dikerjakan dengan mengikuti panduan dari myskill. <br>
+## Prasyarat
+- Instal dan konfigurasi **Node.js** dan **npm**
 
-Tahap awal <br>
--> Buat repository baru di github <br>
--> Lakukan clone di vs code <br>
--> Buka foldernya <br>
--> Buka terminal dan run command berikut : (sebelum run command di terminal pastikan telah berada di path direktori folder repository) <br>
-  &emsp; -> npm init <br>
-    &emsp; &emsp; -> description : mocha chai Reqres example <br>
-    &emsp; &emsp; -> test command : mocha <br>
-  &emsp; -> npm --version (Cek versi npm terinstal) <br>
-  &emsp; -> npm install mocha <br>
-  &emsp; -> npm install chai <br>
-  &emsp; -> npm install supertest <br>
-  &emsp; -> npm install --save-dev @babel/core <br>
+## Tahap Awal
+- Buat **repository** baru di **github** atau **folder** baru di **lokal**
+  - Lakukan **clone** dari **repository github** di *vs code*
+- Buka **proyek/folder/direktori** tersebut di **vs code**
+- Buka **terminal** dan **run command** berikut untuk *inisialisasi proyek* dan *instalasi library* : (pastikan telah **berada** di *path proyek/direktori/folder/repository*)
+  - `npm init`
+    - description : mocha chai Reqres example (*isian bebas*)
+    - test command : mocha 
+  - `npm --version` (*Cek versi npm terinstal*) 
+  - `npm install mocha` 
+  - `npm install chai` 
+  - `npm install supertest` 
+  - `npm install --save-dev @babel/core`
+  - `npm install mochawesome` ([HTML Report dengan mochawesome](#html-report-dengan-mochawesome))
 
-Buat file assert.js untuk pemanggilan dengan tujuan untuk mereturn suatu assert yang diinginkan <br>
+## Contoh Assert
+- Buat file **assert.js** yang berisi pesan yang ingin diassert. Kemudian, **panggil** untuk mereturn assert tersebut.
+- Contoh *penggunaannya* di test\api\ **welcomeTest.js**
 
-Buat di akar, folder dengan path test\api untuk tempat file script yang akan dilakukan testing <br>
+## Struktur Folder
+- Buat di **akar**, folder dengan path **test\api** sebagai tempat *file script test*
 
-Cara run test di terminal : (pilih salah satu) <br>
--> npm run test (Syarat : Sudah terisi di file package.json bagian scripts bagian "test" : mocha path/to/file.js) <br>
--> npm run test path/to/file.js (Syarat : Sudah terisi di file package.json bagian scripts bagian "test" : mocha) <br>
-Note : Kalau 2 kata, misalnya "test post" : mocha path/to/file.js maka cara runnya -> npm run 'test post' <br>
+## Cara Run Test di Terminal
+- Buka file **package.json**, *konfigurasi perintah tes* di bagian `scripts`
+- Metode 1
+  - Contoh `"test": "mocha path/to/testScript.js"`
+  - **Run :** `npm run test`
+  - *Catatan :* Kalau **perintah** terdiri dari **&ge; 2 kata**
+    - Contoh `"test create user": "mocha path/to/scriptFile.js"` 
+    - Cara **run :** `npm run 'test create user'`
+- Metode 2
+  - Contoh `"test": "mocha"`
+  - **Run :** `npm run test path/to/testFile.js`
 
-Buat file env.js untuk mereturn baseUrl yang dapat dipanggil oleh file script testing di test\api untuk memudahkan <br>
-
-Reporting in mochawesome <br>
--> install di terminal : npm install mochawesome <br>
-Cara run <br>
--> npx mocha --spec path/to/ChaiAssert.js --reporter mochawesome <br>
--> Nanti muncul folder mochawesome-report dan buka folder tersebut <br>
--> Open di browser file mochawesome.html <br>
--> Nanti muncul reporting testing dalam bentuk html <br>
-
-Buat folder data dan file baru di dalamnya userData.js yang berguna untuk pemanggilan data ke file script testing test\api
+## Helper 
+- Di *direktori akar*, buat file **env.js** untuk mereturn **baseUrl** (*untuk memudahkan/mempersingkat code*) yang dapat dipanggil oleh file test di *test\api*. Contoh *penggunaannya* di test\api\ __postLogin.js__
+- Di *direktori akar*, buat file dengan folder data\ **userData.js** untuk return *data* ke file script di *test\api*. Contoh *penggunaannya* di test\api\ __postLogin.js__
+  
+## HTML Report dengan mochawesome
+- Pastikan [library mochawesome](#tahap-awal) sudah terinstal : `npm list` (cek library npm dari proyek saat ini di terminal)  
+- Cara **run** di terminal
+  - `npx mocha --spec path/to/test_script.js --reporter mochawesome`
+    - *Contoh:* `npx mocha --spec test/api/chaiAssert.js --reporter mochawesome` <br>
+- Di *direktori akar*, akan muncul folder **mochawesome-report** dan *buka* folder tersebut
+- *Open* di browser file **mochawesome.html** maka akan muncul *reporting testing* dalam bentuk *html*
