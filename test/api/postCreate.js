@@ -1,5 +1,6 @@
 const request = require('supertest')
 const assert = require('chai').assert;
+const expect = require('chai').expect
 const baseUrl = require('../../env')
 const DATA = require('../../data/userData.js')
 
@@ -28,9 +29,16 @@ describe('Post Request Create', () => {
         jobResponse = (await response).body.job
 
         // assert
+        // Check response status must be equal to 201
+        expect(201, "response status must be equal to 201").to.equal((await response).status)
+
         // check requests and response bodies equal
         assert.equal(nameResponse, nameRequest, "Unexpected name: " + nameResponse)
         assert.equal(jobResponse, jobRequest, "Unexpected job: " + jobResponse)
+
+        // check response body has a property
+        expect((await response).body).to.haveOwnProperty('id')
+        expect((await response).body).to.have.own.property('createdAt')
     })
 
 })

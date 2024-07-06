@@ -15,7 +15,7 @@
     - test command : mocha 
   - `npm --version` (*Cek versi npm terinstal*) 
   - `npm install mocha` 
-  - `npm install chai` 
+  - `npm install chai` ([Chai Assertion Library Docs](https://www.chaijs.com/api/assert/))
   - `npm install supertest` 
   - `npm install --save-dev @babel/core`
   - `npm install mochawesome` ([HTML Report dengan mochawesome](#html-report-dengan-mochawesome))
