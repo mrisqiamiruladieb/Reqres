@@ -26,6 +26,7 @@
 
 ## Struktur Folder
 - Buat di **akar**, folder dengan path **test\api** sebagai tempat *file script test*
+- [Referensi lainnya](https://github.com/Automation-Test-Starter/SuperTest-API-Test-Starter)
 
 ## Cara Run Test di Terminal
 - Buka file **package.json**, *konfigurasi perintah tes* di bagian `scripts`

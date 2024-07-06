@@ -3,5 +3,10 @@ module.exports = {
     {
         "email": "eve.holt@reqres.in",
         "password": "pistol"
+    },
+    "CREATE_USER_DATA":
+    {
+        "name": "morpheus",
+        "job": "leader"
     }
 }
