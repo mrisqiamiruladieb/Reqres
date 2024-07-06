@@ -32,6 +32,9 @@ describe('Post Request Create', () => {
         // Check response status must be equal to 201
         expect(201, "response status must be equal to 201").to.equal((await response).status)
 
+        // cek respons bodi not empty
+        expect((await response).body).to.not.be.empty;
+
         // check requests and response bodies equal
         assert.equal(nameResponse, nameRequest, "Unexpected name: " + nameResponse)
         assert.equal(jobResponse, jobRequest, "Unexpected job: " + jobResponse)
