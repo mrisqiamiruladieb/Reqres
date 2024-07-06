@@ -34,7 +34,8 @@ describe('Post Request Create', () => {
 
         // cek respons bodi not empty
         expect((await response).body).to.not.be.empty;
-
+        assert.isNotEmpty((await response).body);
+        
         // check requests and response bodies equal
         assert.equal(nameResponse, nameRequest, "Unexpected name: " + nameResponse)
         assert.equal(jobResponse, jobRequest, "Unexpected job: " + jobResponse)
