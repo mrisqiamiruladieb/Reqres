@@ -44,6 +44,7 @@
 ## Helper 
 - Di *direktori akar*, buat file **env.js** untuk mereturn **baseUrl** (*untuk memudahkan/mempersingkat code*) yang dapat dipanggil oleh file test di *test\api*. Contoh *penggunaannya* di test\api\ __postLogin.js__
 - Di *direktori akar*, buat file dengan folder data\ **userData.js** untuk return *data* ke file script di *test\api*. Contoh *penggunaannya* di test\api\ __postLogin.js__
+- Kirim request header dengan `.set()`, setelah panggil method (CRUD). **Contoh:** `.post().set()` ([Referensi](https://github.com/ladjs/supertest/issues/398))
   
 ## Validasi JSON Schema
 - ([Referensi](https://medium.com/@AlexanderObregon/json-schema-a-guide-to-validating-your-json-data-9f225b2a17ef)) Pastikan [library AJV](#tahap-awal) sudah terinstal : `npm list` (cek library npm dari proyek saat ini di terminal)

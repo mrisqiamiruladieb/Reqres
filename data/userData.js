@@ -107,5 +107,33 @@ module.exports = {
           "data",
           "support"
         ]
+      },
+      "VALID_LOGIN_SCHEMA":
+      {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "title": "Generated schema for Root",
+        "type": "object",
+        "properties": {
+          "token": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "token"
+        ]
+      },
+      "INVALID_LOGIN_SCHEMA":
+      {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "title": "Generated schema for Root",
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "error"
+        ]
       }
 }

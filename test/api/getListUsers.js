@@ -16,7 +16,8 @@ describe("Get Request List Users", () => {
       // .get("/users?page=2")
       .get("/users")
       // query params
-      .query({ page: 2 });
+      .query({ page: 2 })
+      .set('accept', 'application/json');
 
     console.log("-----------Request-----------");
     console.log("Method: ", (await response).request.method);
