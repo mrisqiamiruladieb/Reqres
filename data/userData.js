@@ -195,7 +195,29 @@ module.exports = {
       },
       "UPDATE_USER_DATA":
       {
-        "name": "morpheus-update",
+        "name": "morpheus-update"+randInt,
         "job": "zion resident-update"
+    },
+    "VALID_UPDATE_USER_SCHEMA":
+    {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Generated schema for Root",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "job": {
+          "type": "string"
+        },
+        "updatedAt": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "job",
+        "updatedAt"
+      ]
     }
 }

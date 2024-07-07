@@ -120,4 +120,120 @@ describe("CRUD User", () => {
       console.log("JSON data is valid");
     }
   });
+
+  it("Get List Users", async () => {
+    const response = request(baseUrl())
+      // .get("/users?page=2")
+      .get("/users")
+      // query params
+      .query({ page: 2 })
+      .set("accept", "application/json");
+
+    console.log("-----------Request-----------");
+    console.log("Method: ", (await response).request.method);
+    console.log("Url: ", (await response).request.url);
+    console.log("Header:\n", (await response).request.header);
+
+    console.log("\n-----------Response-----------");
+    console.log("Response Status Code: " + (await response).status);
+    console.log("Response Body:\n", (await response).body);
+
+    // parse the response body
+    // akses dan store array/objek respons bodi
+    firstNameId7Response = (await response).body.data[0].first_name;
+    lastNameId8Response = (await response).body.data[1].last_name;
+
+    // assert
+    // Check response status must be equal to 200
+    expect(200, "response status must be equal to 200").to.equal(
+      (await response).status
+    );
+
+    // cek respons bodi not empty
+    assert.isNotEmpty((await response).body);
+
+    // check requests and response bodies equal
+    assert.equal(
+      firstNameId7Response,
+      "Michael",
+      "Unexpected first name id 7: " + firstNameId7Response
+    );
+    assert.equal(
+      lastNameId8Response,
+      "Ferguson",
+      "Unexpected last name id 8: " + lastNameId8Response
+    );
+
+    // check response body has a property
+    // akses dan store array/objek respons bodi
+    expect((await response).body).to.have.nested.property("data[2].avatar");
+    assert.deepNestedInclude((await response).body, { "data[2].id": 9 });
+
+    // validasi json schema
+    console.log("\n-----------Validasi JSON Schema-----------");
+    const isValid = ajv.validate(
+      DATA.VALID_GET_LIST_USERS_SCHEMA,
+      (await response).body
+    );
+    if (!isValid) {
+      console.error("Validation errors:", ajv.errorsText());
+    } else {
+      console.log("JSON data is valid");
+    }
+  });
+
+  it("Update an user", async () => {
+    //path params
+    let pathParams = 2;
+    const response = request(baseUrl())
+      .put("/users/" + pathParams)
+      .send(DATA.UPDATE_USER_DATA)
+      .set("accept", "application/json");
+
+    console.log("-----------Request-----------");
+    console.log("Method: ", (await response).request.method);
+    console.log("Url: ", (await response).request.url);
+    console.log("Header:\n", (await response).request.header);
+    console.log("Request Body:\n", (await response).request._data);
+
+    console.log("\n-----------Response-----------");
+    console.log("Response Status Code: " + (await response).status);
+    console.log("Response Body:\n", (await response).body);
+
+    // parse the request body
+    nameRequest = (await response).request._data.name;
+    jobRequest = (await response).request._data.job;
+
+    // parse the response body
+    nameResponse = (await response).body.name;
+    jobResponse = (await response).body.job;
+
+    // assert
+    // Check response status must be equal to 200
+    expect(200, "response status must be equal to 200").to.equal(
+      (await response).status
+    );
+
+    // cek respons bodi not empty
+    expect((await response).body).to.not.be.empty;
+
+    // check requests and response bodies equal
+    assert.equal(nameResponse, nameRequest, "Unexpected name: " + nameResponse);
+    assert.equal(jobResponse, jobRequest, "Unexpected job: " + jobResponse);
+
+    // check response body has a property
+    expect((await response).body).to.have.own.property("updatedAt");
+
+    // validasi json schema
+    console.log("\n-----------Validasi JSON Schema-----------");
+    const isValid = ajv.validate(
+      DATA.VALID_UPDATE_USER_SCHEMA,
+      (await response).body
+    );
+    if (!isValid) {
+      console.error("Validation errors:", ajv.errorsText());
+    } else {
+      console.log("JSON data is valid");
+    }
+  });
 });
