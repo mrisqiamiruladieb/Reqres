@@ -1,3 +1,6 @@
+// Returns a random integer from 0 to 100:
+let randInt = Math.floor(Math.random() * 101);
+
 module.exports = {
     "LOGIN_USER_DATA":
     {
@@ -7,7 +10,7 @@ module.exports = {
     "CREATE_USER_DATA":
     {
         "name": "morpheus",
-        "job": "leader"
+        "job": "leader"+randInt
     },
     "VALID_CREATE_USER_SCHEMA":
     {
@@ -189,5 +192,10 @@ module.exports = {
           "data",
           "support"
         ]
-      }
+      },
+      "UPDATE_USER_DATA":
+      {
+        "name": "morpheus-update",
+        "job": "zion resident-update"
+    }
 }
