@@ -54,7 +54,7 @@
 - [Run](#cara-run-test-di-terminal) *file script*
 
 ## HTML Report dengan mochawesome
-- Pastikan [library mochawesome](#tahap-awal) sudah terinstal : `npm list` (cek library npm dari proyek saat ini di terminal)  
+- Pastikan [library mochawesome](#tahap-awal) sudah terinstal : `npm list` (cek library npm dari proyek saat ini di terminal) atau bagian **dependencies** di **package.json**  
 - Cara **run** di terminal
   - `npx mocha --spec path/to/test_script.js --reporter mochawesome`
     - *Contoh:* `npx mocha --spec test/api/chaiAssert.js --reporter mochawesome` <br>
