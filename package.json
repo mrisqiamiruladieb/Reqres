@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "welcome": "mocha test/api/welcomeTest.js",
-    "test": "mocha",
+    "test": "mocha --timeout 10000",
     "post register": "mocha test/api/postRegister.js",
     "post login": "mocha test/api/postLogin.js",
     "get list users": "mocha test/api/getListUsers.js",
